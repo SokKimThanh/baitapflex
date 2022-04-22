@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="scss/web-api-example.css">
+</head>
+
+<body>
+    <section class="header">
+        <h1 class="title">What are web component?</h1>
+        <p>Set a web platform API's that allow us to create custom,
+            reussable and encapsulated html tags to use in web pages and web apps
+        </p>
+        <p>
+            Web components do not require any special 3rd party libraries or frameworks
+            but can certainly be used with them
+        </p>
+    </section>
+    <section class="subheader">
+        <h1 class="subheader-title title">3 main building blocks</h1>
+        <ul class="subheader-list sub-list">
+            <li class="green tablink w3-red" onclick="openCity(event,'customelement')">
+                <a>Custom Elements</a>
+            </li>
+            <li class="blue tablink" onclick="openCity(event,'shadowdom')">
+                <a>Shadow DOM</a>
+            </li>
+            <li class="skyblue tablink" onclick="openCity(event,'htmltemplate')">
+                <a>HTML Templates</a>
+            </li>
+        </ul>
+    </section>
+    <section id="customelement" class="custom-element city">
+        <article class="custom-element-group">
+            <h1 class="title">Custom Elements</h1>
+            <ul class="sub-list">
+                <li class="tablink1" onclick="openCity1(event,'customhtmltag')">
+                    <h3>Create custom HTML tags</h2>
+                        <code>
+                        class AppDrawer entends HTMLElement {...} 
+                        window.customElement.define('app-drawer', AppDrawer);
+                    </code>
+                </li>
+                <li class="tablink1" onclick="openCity1(event,'customclass')">
+                    <h3>Create custom class</h3>
+                </li>
+                <li class="tablink1 w3-red" onclick="openCity1(event,'lifecyclemethods')">
+                    <h3>Lifecycle methods available</h3>
+                    <code>
+                        < app-drawer > < / app-drawer >
+                    </code>
+                </li>
+            </ul>
+        </article>
+        <article id="customhtmltag" class="city1" style="display:none">
+            <h4 class="title">Create custom HTML tags</h4>
+        </article>
+        <article id="customclass" class="city1" style="display:none">
+            <h4 class="title">Create custom class</h4>
+        </article>
+        <article id="lifecyclemethods" class="city1">
+            <h4 class="title">Custom Elements - LifeCycle Methods</h4>
+            <ul>
+                <li>
+                    <p><code>Constructor()</code>:<span>Called when an instance of the elements is created or
+                            upgraded</span>
+                    </p>
+
+                </li>
+                <li>
+                    <p><code>ConnectedCallback()</code>:<span>Called everytime when the element is inserted into the
+                            DOM</span></p>
+                </li>
+                <li>
+                    <p><code>disconnectedCallback()</code>:<span>Called every time the element is removed from the
+                            DOM</span></p>
+                </li>
+                <li>
+                    <p><code>attributeChangedCallback(attributeName, oldValue, newvalue)()</code>:<span>Called when an
+                            attribute is added, removed, updated, or replaced</span></p>
+                </li>
+            </ul>
+        </article>
+    </section>
+    <section id="shadowdom" class="shadow-dom city" style="display:none">
+        <article class="custom-element-group">
+            <h1 class="title">Shadow DOM</h1>
+            <ul>
+                <li>
+                    <p>Used for self-contained components</p>
+                </li>
+                <li>
+                    <p>Encapsulate style and markup</p>
+                </li>
+                <li>
+                    <p>Create with <code><b><i>element.attachshadow({mode:open})</i></b></code></p>
+                </li>
+                <li>
+                    <p>Create a <code><b><i>"ShadowRoot"</i></b></code> that we can reference and interract with</p>
+                </li>
+            </ul>
+        </article>
+    </section>
+    <section id="htmltemplate" class="html-template city" style="display:none">
+        <article class="custom-element-group">
+            <h1 class="title">HTML Template</h1>
+            <ul>
+                <li>
+                    <p>Define the encapsulated markup of our web component</p>
+                </li>
+                <li>
+                    <p>Template tag stores markup on page</p>
+                </li>
+                <li>
+                    <p>include both HTML and CSS in templates</p>
+                </li>
+                <li>
+                    <p>Use slots to add custome text</p>
+                </li>
+            </ul>
+        </article>
+    </section>
+
+    <section class="let-get-started">
+        <h1 class="title">Let's get started</h1>
+        <article>
+            <h3>Hello world</h3>
+            <p>video học shadow DOM</p>
+            <p>links: <a href="https://www.youtube.com/watch?v=PCWaFLy3VUo">here</a>
+            </p>
+
+            <user-card name="Lego" avatar="https://randomuser.me/api/portraits/lego/3.jpg">
+                <div slot="email">lego@gmai.com</div>
+                <div slot="phone">555-555-555</div>
+            </user-card>
+        </article>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/PCWaFLy3VUo" title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe>
+    </section>
+    <script src="./js/userCard.js"></script>
+</body>
+
+</html>
