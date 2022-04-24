@@ -1,0 +1,132 @@
+body {
+  box-sizing: border-box;
+  font-family: "lato", sans-serif;
+}
+
+h3 {
+  color: purple;
+}
+
+.title {
+  background: black;
+  color: white;
+  padding: 8px;
+  border-left: #E200DE 20px solid;
+}
+
+.header {
+  background: #EB5231;
+  color: #fff;
+  padding: 100px 50px;
+  font-size: 1.5rem;
+}
+
+.subheader {
+  background: #fff;
+  color: #fff;
+  font-size: 1.2rem;
+}
+
+/* .subheader-title {
+    text-align: center;
+} */
+.subheader-list {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.green {
+  padding: 50px;
+  background: #26FD71;
+  color: black;
+}
+
+.blue {
+  padding: 50px;
+  background: #3F32FA;
+  color: white;
+}
+
+.skyblue {
+  padding: 50px;
+  background: #22B6E3;
+  color: white;
+}
+
+.custom-element {
+  background: #26FD71;
+}
+
+.custome-element-group {
+  padding: 0 50px;
+}
+
+.sub-list {
+  margin: 0 50px;
+  background: #F4F4F4;
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 128px;
+}
+
+.sub-list > li {
+  display: flex;
+  flex-flow: column;
+  width: 350px;
+  border: 1px solid;
+  padding: 4px;
+  height: 100%;
+  margin: 1px;
+  transition: all 0.2s ease-in-out;
+}
+
+.sub-list > li:hover {
+  background: #00FF7C;
+  color: #000;
+  border: #fff 1px solid;
+  box-sizing: border-box;
+  box-shadow: 0px 0 16px 8px #000000;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+}
+
+.sub-list > li:hover code {
+  background: #F1573A;
+  color: #fff;
+  transition: all 0.5s ease-in-out;
+}
+
+.shadow-dom {
+  background: #3F32FA;
+  color: #fff;
+}
+
+.html-template {
+  background: #22B6E3;
+  color: #fff;
+}
+
+.let-get-started {
+  background: #F1573A;
+  padding: 100px 50px;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.w3-red {
+  background: #00FF7C;
+  color: #000;
+  border: #fff 1px solid;
+  box-sizing: border-box;
+  box-shadow: 0px 0 16px 8px #000000;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+}
+
+/*# sourceMappingURL=web-api-example.css.map */

@@ -220,18 +220,16 @@
       /* Inside auto layout */
 
       margin: 16px 0px;
+      box-sizing: border-box;
       .card {
         /* Frame 21 */
 
         /* Auto layout */
-
+        width: 327px;
+        height: 208px;
         display: flex;
         flex-direction: row;
         padding: 24px;
-
-        width: 327px;
-        height: 100%;
-
         background: #fbfcff;
         border-radius: 16px;
 
@@ -355,7 +353,6 @@
       .card:hover {
         background: #fbfcff;
         border: 1px solid #bfc8e6;
-        box-sizing: border-box;
         box-shadow: 0px 8px 23px rgba(218, 224, 249, 0.7);
         border-radius: 16px;
       }
