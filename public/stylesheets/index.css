@@ -133,8 +133,15 @@
 .frame28 .card-desktop {
   display: grid;
   grid-template: 1fr 1fr/1fr 1fr 1fr;
-  align-items: flex-start;
   padding: 0px;
+}
+@media screen and (max-width: 1024px) {
+  .frame28 .card-desktop {
+    display: flex;
+    align-items: center;
+    flex-flow: row wrap;
+    justify-content: space-between;
+  }
 }
 .frame28 .card-desktop .card {
   /* Frame 21 */
@@ -146,7 +153,7 @@
   padding: 24px;
   background: #fbfcff;
   border-radius: 16px;
-  /* Inside auto layout */
+  box-sizing: border-box;
   margin: 16px;
 }
 .frame28 .card-desktop .card .card-img {
@@ -157,29 +164,23 @@
   /* Inside auto layout */
   margin: 0 16px;
 }
+.frame28 .card-desktop .card .card-text-info {
+  height: 100%;
+  overflow: auto;
+}
 .frame28 .card-desktop .card .card-text-info-name {
-  /* Frame 18 */
-  /* Auto layout */
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  padding: 20px 0px 0px;
-  width: 125px;
-  height: 68px;
-  /* Inside auto layout */
   margin: 16px 0px;
+  color: #151b32;
 }
 .frame28 .card-desktop .card .card-text-info-name .title {
-  /* Lelah Nichols */
   font-family: "Merriweather";
   font-style: normal;
   font-weight: 900;
   font-size: 18px;
   line-height: 23px;
-  /* identical to box height */
-  /* #151B32 */
-  color: #151b32;
-  /* Inside auto layout */
   margin: 4px 0px;
 }
 .frame28 .card-desktop .card .card-text-info-name .subtitle {
@@ -188,10 +189,6 @@
   font-weight: 500;
   font-size: 14px;
   line-height: 21px;
-  /* identical to box height */
-  /* #151B32 */
-  color: #151b32;
-  /* Inside auto layout */
   margin: 4px 0px;
 }
 .frame28 .card-desktop .card .card-text-info-hobbies {
@@ -217,7 +214,6 @@
   background: #ffffff;
   /* #BFC8E6 */
   border: 1px solid #bfc8e6;
-  box-sizing: border-box;
   border-radius: 10px;
   /* Inside auto layout */
   margin: 0px 4px;
