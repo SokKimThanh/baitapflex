@@ -100,13 +100,14 @@ template.innerHTML = `
         <img class="card-img" src="img/zoesaldana.jpg" alt="zoesaldana">
         <div class="card-text-info">
             <div class="card-text-info-name">
-                <h3 class="title">Mayte Michelle Rodríguez</h3>
-                <p class="subtitle">trudy chacon</p>
+                <h3 class="title">asdasdsa</h3>
+                <p class="subtitle"></p>
             </div>
             <ul class="card-text-info-hobbies">
             </ul>
         </div>
     </div>
+    
 `
 class SuperCardComponent extends HTMLElement {
   constructor() {
