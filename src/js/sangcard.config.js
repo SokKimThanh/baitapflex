@@ -12,13 +12,20 @@ template.innerHTML = `<style>
 class WebApiComponent extends HTMLElement {
     constructor() {
         super();
-        this.attachShadow({ mode: 'close' }); // Bước 2 : Encapsulation
+        this.attachShadow({ mode: 'open' }); // Bước 2 : Encapsulation
         this.shadowRoot.appendChild(template.content.cloneNode(true)); // Bước 3 : tạo template cho shadow - root  
     }
     toggleShow() {
-       const img = document.createElement('img');
-       img.src="https://dictionary.cambridge.org/vi/images/thumb/flower_noun_002_14403.jpg?version=5.0.234";
-       this.shadowRoot.querySelector('#flowerdiv').appendChild(img);
+        const flowers =JSON.parse(this.getAttribute('picture')).key ;
+        for (var i = 0; i < flowers.length; i++) {
+            const img = document.createElement('img');
+            img.src = flowers[i];
+            this.shadowRoot.querySelector('#flowerdiv').appendChild(img);
+        }
+
+        // this.shadowRoot.querySelector('#flowerdiv').appendChild(img);
+        // console.log(this.getAttribute('picture'))
+
     }
     //Bước 4 : đóng gói sự kiện
     connectedCallback() {
@@ -28,6 +35,7 @@ class WebApiComponent extends HTMLElement {
         this.shadowRoot.querySelector('#buttonshowevent').removeEventListener();
     }
 }
+
 
 //Bước 1 :Tạo tên cho custom element
 window.customElements.define('shadow-root-template', WebApiComponent);
