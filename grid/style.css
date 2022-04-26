@@ -1,0 +1,148 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#nav-bar {
+  background-color: bisque;
+
+  height: 200px;
+}
+#menu {
+  background-color: blue;
+
+  height: 200px;
+}
+#slider {
+  background-color: brown;
+  height: 200px;
+}
+#subbaner {
+  background-color: aqua;
+  height: 200px;
+}
+#list-item {
+  background-color: black;
+  height: 200px;
+  /* grid */
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: 1fr 1fr 1fr;
+}
+#newslider {
+  background-color: aquamarine;
+  height: 200px;
+  /* grid */
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: 1fr 80% 1fr;
+}
+#newbanner {
+  background-color: chocolate;
+  height: 200px;
+}
+#newlist {
+  background-color: yellowgreen;
+  height: 500px;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  /* grid-template-rows: 1fr 1fr 1fr; */
+  grid-gap: 1em;
+}
+#footer {
+  background-color: violet;
+  height: 200px;
+}
+#list-item #list-item1 {
+  background-color: chartreuse;
+  height: 100%;
+  width: 100%;
+  grid-column: 3/6;
+  grid-row: 1/2;
+}
+#list-item #list-item2 {
+  background-color: coral;
+  height: 100%;
+  width: 100%;
+  grid-column: 8/11;
+  grid-row: 1/2;
+}
+#list-item #list-item3 {
+  background-color: blueviolet;
+  height: 100%;
+  width: 100%;
+  grid-column: 3/11;
+  grid-row: 3/4;
+}
+#newslider #newslider1 {
+  background-color: aliceblue;
+  height: 100%;
+  width: 100%;
+  grid-column: 3/5;
+  grid-row-start: 2;
+  grid-row-end: 3;
+}
+#newslider #newslider2 {
+  background-color: antiquewhite;
+  height: 100%;
+  width: 100%;
+  grid-column-start: 6;
+  grid-column-end: 8;
+  grid-row-start: 2;
+  grid-row-end: 3;
+}
+#newslider #newslider3 {
+  background-color: aqua;
+  height: 100%;
+  width: 100%;
+  /*  grid-column-start: 9;
+  grid-column-end: 11;
+  grid-row-start: 2;
+  grid-row-end: 3; */
+  grid-column: 9/11;
+  grid-row: 2/3;
+}
+
+#newlist #newlist1 {
+  background-color: black;
+  height: 100%;
+  width: 100%;
+  grid-column: 4/6;
+  grid-template-columns: 1fr 30%;
+}
+#newlist #newlist2 {
+  background-color: antiquewhite;
+  height: 100%;
+  width: 100%;
+  grid-column: 6/8;
+}
+#newlist #newlist3 {
+  background-color: aquamarine;
+  height: 100%;
+  width: 100%;
+  grid-column: 8/10;
+}
+#newlist #newlist4 {
+  background-color: bisque;
+  height: 100%;
+  width: 100%;
+  grid-column: 4/6;
+}
+#newlist #newlist5 {
+  background-color: blanchedalmond;
+  height: 100%;
+  width: 100%;
+  grid-column: 6/8;
+}
+#newlist #newlist6 {
+  background-color: brown;
+  height: 100%;
+  width: 100%;
+  grid-column: 8/10;
+}
+
+body {
+  display: grid;
+  grid-template-columns: 1fr;
+}
